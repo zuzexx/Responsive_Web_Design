@@ -8,16 +8,45 @@
     <title>Survey form</title>
 </head>
 <body>
-    <h1 id="title"> This is the title </h1>
-  <p id="description"> This is the description </p>
+  <h1 id="title"> Restaurant survey</h1>
+  <p id="description"> Please rate your restaurant experience. </p>
   
   <form id="survey-form">
-    <label for="name" id="name-label"> Name: </label><br>
+    <label for="party" id="party-label">How many were in your party?</label><br>
+    <input type="number" id="party" name="party"><br>
+    
+    <label for="date" id="date-label">Date of visit</label><br>
+    <input type="date" id="date" name ="date"><br><br>
+    
+    <input type="radio" id="dinein" name="choice" value="dinein">
+    <label for="dinein">Dine in</label>
+    <input type="radio" name="choice" id="takeout" value="takeout">
+    <label for="takeout">Take out</label>
+    <input type="radio" name="choice" id="breakfast" value="breakfast">
+    <label for="breakfast">Breakfast</label>
+    <input type="radio" name="choice" id="lunch" value="lunch">
+    <label for="lunch">Lunch</label>
+    <input type="radio" name="choice" id="dinner" value="dinner">
+    <label for="dinner">Dinner</label><br><br>
+    
+    <label for="dropdown">Choose your server:</label>
+    <select name="dropdown" id="dropdown">
+      <option value="LaraRichardson">Lara Richardson</option>
+      <option value="AriaShaw">Aria Shaw</option>
+      <option value="DemiMoss">Demi Moss</option>
+      <option value="LeighFoster">Leigh Foster</option>
+      <option value="GlennHarris">Glenn Harris</option>
+      <option value="AidenWilkinson">Aiden Wilkinson</option>     
+    </select>
+    
+   <br> <br><label for="name" id="name-label"> Name:* </label><br>
     <input type="text" id="name" name="name" required placeholder="John Smith"><br>
-    <label for="email" id="email-label"> Email:</label><br>
+    
+    <label for="email" id="email-label"> Email:*</label><br>
     <input type="email" id="email" name="email" required placeholder="myname@email.com"><br>
+    
     <label for="number" id="number-label"> Number: </label><br>
-    <input type="number" id="number" name="number" min="0" max="999 999 999" placeholder="123-456-789"><br>
+    <input type="number" id="number" name="number" min="0" max="999 999 999" placeholder="123-456-789"><br>    
     </form>
 
     <script src="script.js"></script>
