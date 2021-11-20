@@ -8,4 +8,19 @@ body{
     align-items: center;
     justify-content: center;
     overflow:hidden;
+    font-family: "Lucida Console", "Courier New", monospace;
+    background-color: hsl(36, 100%, 85%);
+}
+h1{
+    text-transform:uppercase;
+}
+#description{
+    text-transform: uppercase;
+    font-style: italic;
+}
+span{
+    font-weight: bold;
+}
+label{
+    font-style: italic;
 }

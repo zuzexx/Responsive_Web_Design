@@ -9,13 +9,13 @@
 </head>
 <body>
   <h1 id="title"> Restaurant survey</h1>
-  <p id="description"> Please rate your restaurant experience. </p>
+  <p id="description"> Please rate your restaurant experience. </p><br>
   
   <form id="survey-form">
-    <label for="party" id="party-label">How many were in your party?</label><br>
-    <input type="number" id="party" name="party"><br>
+    <label for="party" id="party-label">How many were in your party?</label>
+    <input type="number" id="party" name="party">
     
-    <label for="date" id="date-label">Date of visit</label><br>
+    <label for="date" id="date-label">Date of visit</label>
     <input type="date" id="date" name ="date"><br><br>
     
     <input type="radio" id="dinein" name="choice" value="dinein">
@@ -37,12 +37,12 @@
       <option value="LeighFoster">Leigh Foster</option>
       <option value="GlennHarris">Glenn Harris</option>
       <option value="AidenWilkinson">Aiden Wilkinson</option>     
-    </select><br>
+    </select><br><br>
     
     <label for="textarea">What did you order?</label><br>
     <textarea id="textarea" name="textarea" rows="10" cols="50">Please enter your food </textarea><br>
     
-    <p> Quality of Food:
+    <p> <span>Quality of Food:</span>
     <input type="checkbox" id="excellent" name="Excellent" value="excellent">
       <label for="excellent">Excellent</label>
       <input type="checkbox" id="good" name="good" value="good">
@@ -52,7 +52,7 @@
       <input type="checkbox" id="poor" name="poor" value ="poor">
       <label for="poor">Poor</label>
     </p>
-    <p> Portion Size:
+    <p><span> Portion Size:</span>
     <input type="checkbox" id="excellent" name="Excellent" value="excellent">
       <label for="excellent">Excellent</label>
       <input type="checkbox" id="good" name="good" value="good">
@@ -62,7 +62,7 @@
       <input type="checkbox" id="poor" name="poor" value ="poor">
       <label for="poor">Poor</label>
     </p>
-    <p> Ease of Ordering:
+    <p><span> Ease of Ordering:</span>
     <input type="checkbox" id="excellent" name="Excellent" value="excellent">
       <label for="excellent">Excellent</label>
       <input type="checkbox" id="good" name="good" value="good">
@@ -72,7 +72,7 @@
       <input type="checkbox" id="poor" name="poor" value ="poor">
       <label for="poor">Poor</label>
     </p>
-    <p> Service:
+    <p><span>Service:</span>
     <input type="checkbox" id="excellent" name="Excellent" value="excellent">
       <label for="excellent">Excellent</label>
       <input type="checkbox" id="good" name="good" value="good">
@@ -82,7 +82,7 @@
       <input type="checkbox" id="poor" name="poor" value ="poor">
       <label for="poor">Poor</label>
     </p>
-    <p> Cleanliness:
+    <p><span>Cleanliness:</span>
     <input type="checkbox" id="excellent" name="Excellent" value="excellent">
       <label for="excellent">Excellent</label>
       <input type="checkbox" id="good" name="good" value="good">
@@ -92,7 +92,7 @@
       <input type="checkbox" id="poor" name="poor" value ="poor">
       <label for="poor">Poor</label>
     </p>
-    <p> Overall Value:
+    <p><span> Overall Value:</span>
     <input type="checkbox" id="excellent" name="Excellent" value="excellent">
       <label for="excellent">Excellent</label>
       <input type="checkbox" id="good" name="good" value="good">
@@ -103,13 +103,35 @@
       <label for="poor">Poor</label>
     </p>
     
-   <br> <br><label for="name" id="name-label"> Name:* </label><br>
+    <label for="textarea">Comments?</label><br>
+    <textarea id="textarea" name="textarea" rows="5" cols="50">Comments? </textarea><br>
+    
+    <p> Age?:
+    <input type="checkbox" id="age1" name="age1" value="age1">
+      <label for="age1">Under 18</label>
+      <input type="checkbox" id="age2" name="age2" value="age2">
+      <label for="age2">19-34</label>
+      <input type="checkbox" id="age3" name="age3" value="age3">
+      <label for="age3">35-54</label>
+      <input type="checkbox" id="age4" name="age4" value ="age4">
+      <label for="age4">55+</label>
+      <label for="dropdown">Gender:</label>
+    <select name="dropdown" id="dropdown">
+      <option value="female">Female</option>
+      <option value="male">Male</option>
+      <option value="nonbinary">Non-Binary</option>
+      <option value="other">Other</option>
+      <option value="no">Would rather not say</option>     
+    </select>
+    </p>
+    
+   <br> <br><label for="name" id="name-label"> Name:* </label>
     <input type="text" id="name" name="name" required placeholder="John Smith"><br>
     
-    <label for="email" id="email-label"> Email:*</label><br>
+    <label for="email" id="email-label"> Email:*</label>
     <input type="email" id="email" name="email" required placeholder="myname@email.com"><br>
     
-    <label for="number" id="number-label"> Number: </label><br>
+    <label for="number" id="number-label"> Number: </label>
     <input type="number" id="number" name="number" min="0" max="999 999 999" placeholder="123-456-789"><br> 
     <button id="submit">Submit</button>
     </form>
