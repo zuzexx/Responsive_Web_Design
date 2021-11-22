@@ -1,6 +1,6 @@
 *{box-sizing: border-box;}
 
-/*body{
+body{
     margin:0;
     display: flex;
     height: 100vh;
@@ -8,11 +8,6 @@
     align-items: center;
     justify-content: center;
     overflow:hidden;
-}*/
-body{
-    display: flex;
-    height:100vh;
-    width: 900vw;
 }
 img{
     justify-content: left;
@@ -37,9 +32,6 @@ ul{
   }
 
   #pricing{
-      order:3;
       display:grid;
   }
-  .p1{grid-area:1/1/2/2;}
-  .p2{grid-area:1/2/2/3;}
-  .p3{grid-area:1/3/2/4;}
+  
