@@ -43,6 +43,34 @@ a{
   display:block;
   padding:10px;
 }
+#submit{
+  height: 30px;
+  width: 100px;
+  border:0;
+  margin:5px;
+  background-color: coral;
+  font-weight: 300;
+  border-radius: 20px;
+}
+#submit:hover{
+  background-color: cornflowerblue;
+  transition:background-color 3s;
+  cursor: pointer;
+}
+.button{
+  height: 30px;
+  width: 100px;
+  border:0;
+  margin:5px;
+  background-color: coral;
+  font-weight: 300;
+  border-radius: 20px;
+}
+.button:hover{
+  background-color: cornflowerblue;
+  transition:background-color 3s;
+  cursor: pointer;
+}
 
 @media only screen and (max-width: 800px) {
   /* For mobile phones: */
