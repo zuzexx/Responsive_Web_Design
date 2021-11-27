@@ -60,12 +60,11 @@ a{
     position:relative;
   }
   .section2{
-    width:100%;
-    top:300px;
-    position: relative;
+    display:none;
   }
+  #gone{display:none;}
  .section3{
-  top:850px;
+  top:350px;
   display:grid;
   width:100%;
   grid-template-columns:auto;
@@ -75,7 +74,7 @@ a{
 }
 form{
   width:100%;
-    top:100px;
+    bottom:0px;
     position: relative;
 }
 .p1{
@@ -85,9 +84,9 @@ form{
   align-items: center;
   text-align: center;
   width: calc(100%/3);
-  margin: 10px;
-  border: 5px solid aquamarine;
-  border-radius: 3px;
+  margin: 5px;
+  border: 2px solid aquamarine;
+  border-radius: 1px;
 }
 .p2{
   grid-area:1/2/2/3;
@@ -96,9 +95,9 @@ form{
   align-items: center;
   text-align: center;
   width: calc(100%/3);
-  margin: 10px;
-  border: 5px solid aquamarine;
-  border-radius: 3px;
+  margin: 5px;
+  border: 2px solid aquamarine;
+  border-radius: 1px;
 }
 .p3{
   grid-area:1/3/2/4;
@@ -107,31 +106,31 @@ form{
   align-items: center;
   text-align: center;
   width: calc(100%/3);
-  margin: 10px;
-  border: 5px solid aquamarine;
-  border-radius: 3px;
+  margin: 5px;
+  border: 2px solid aquamarine;
+  border-radius: 1px;
 }
 }
 
 @media only screen and (min-width: 800px) {
   /*desktop*/
   .section1{
-    width:50%;
-    top:250px;
-    left:45%;
+    width:70%;
+    top:200px;
+    left:30%;
     position:relative;
   }
   .section2{
-    width:50%;
-    top:300px;
+    width:70%;
+    top:250px;
     left:45%;
     position: relative;
   }
  .section3{
-  top:850px;
+  top:750px;
   display:grid;
-  width:50%;
-  left:45%;
+  width:70%;
+  left:35%;
   grid-template-columns:auto;
   justify-self: center;
   align-items: center;
