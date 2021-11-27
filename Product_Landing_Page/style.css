@@ -10,7 +10,6 @@ body{
   height:100wh;
   max-width: 1440px;
   flex-direction: column;
-  overflow:hidden;
   position: relative;
 }
 img{
