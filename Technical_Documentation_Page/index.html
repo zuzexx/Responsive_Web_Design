@@ -42,14 +42,14 @@
           </code></pre>
           <p> Now let's look at a very simple CSS example containing two rules:</p>
           <pre> <code>
-          h1 {
-        color: blue;
-        background-color: yellow;
-        border: 1px solid black;
-      }
-      p {
-        color: red;
-      }
+        h1 {
+          color: blue;
+          background-color: yellow;
+          border: 1px solid black;
+        }
+        p {
+          color: red;
+        }
       </code> </pre>
           <p> The first rule starts with an h1 selector, which means that it will apply its property values to the &lt;h1&gt; element. It contains three properties and their values (each property/value pair is called a declaration): </p>
           <ul>
@@ -81,9 +81,101 @@
         &lt;span&gt;Sheets&lt;/span&gt;
       &lt;/p&gt;
       </code></pre>
+          <p>In the DOM, the node corresponding to our &lt;p&gt; element is a parent. Its children are a text node and the nodes corresponding to our &lt;span&gt; elements. The SPAN nodes are also parents, with text nodes as their children:</p>
+          <pre>
+          P
+      ├─ "Let's use:"
+      ├─ SPAN
+      |   └─ "Cascading"
+      ├─ SPAN
+      |   └─ "Style"
+      └─ SPAN
+          └─ "Sheets"
+          </pre>
+          <p>This is how a browser interprets the previous HTML snippet —it renders the above DOM tree and then outputs it in the browser like so:</p>
+          <div>Let's use: Cascading Style Sheets</div>
+          
+          <h3>Applying CSS to the DOM</h3>
+          <p>Let's say we added some CSS to our document, to style it. Again, the HTML is as follows:</p>
+          <pre><code>
+          &lt;p&gt;
+      Let's use:
+        &lt;span&gt;Cascading&lt;/span&gt;
+        &lt;span&gt;Style&lt;/span&gt;
+        &lt;span&gt;Sheets&lt;/span&gt;
+      &lt;/p&gt;
+          </code></pre>
+          <p>If we apply the following CSS to it:</p>
+          <pre><code>
+          span {
+           border: 1px solid black;
+            background-color: lime;
+          }
+          </pre></code>
+          <p>The browser will parse the HTML and create a DOM from it, then parse the CSS. Since the only rule available in the CSS has a span selector, it will apply that rule to each one of the three spans. The updated output is as follows: </p>
+          <p>Let's use: <span style="border:1px solid black; background-color: lime;">Cascading</span> <span style="border:1px solid black; background-color: lime;">Style</span> <span style="border:1px solid black; background-color: lime;">Sheets</span>
+      </p>
         </section>
-        <section class="main-section" id="section_5"> <header>Section 5</header></section>
-        <section class="main-section" id="section_6"> <header>Section 6</header></section>
+        <section class="main-section" id="How_to_apply_css_to_html"> <header>How to apply CSS to HTML</header>
+          <p>There are three different ways to apply CSS to an HTML document that you'll commonly come across, some more useful than others. Here we'll briefly review each one. </p>
+          <h3>External stylesheet</h3>
+          <p>You've already seen external stylesheets in this article, but not by that name. An external stylesheet is when you have your CSS written in a separate file with a ".css" extension, and you reference it from an HTML &lt;link&gt; element. The HTML file looks something like this:</p>
+          
+          <pre><code>
+          &lt;!DOCTYPE html&gt;
+      &lt;html&gt;
+        &lt;head&gt;
+          &lt;meta charset="utf-8"&gt;
+          &lt;title&gt;My CSS experiment&lt;/title&gt;
+          &lt;link rel="stylesheet" href="style.css"&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;h1&gt;Hello World!&lt;/h1&gt;
+          &lt;p&gt;This is my first CSS example&lt;/p&gt;
+        &lt;/body&gt;
+      &lt;/html&gt;
+      </pre></code>
+          <p>And the CSS file:</p>
+          <pre><code>
+        h1 {
+          color: blue;
+          background-color: yellow;
+          border: 1px solid black;
+        }
+        p {
+          color: red;
+        }
+          </pre></code>
+          <p>This method is arguably the best, as you can use one stylesheet to style multiple documents, and would only need to update the CSS in one place if changes were needed.</p>
+          
+          <h3>Internal stylesheet</h3>
+          
+          <p>An internal stylesheet is where you don't have an external CSS file, but instead place your CSS inside a &lt;style&gt; element, contained inside the HTML head. So the HTML would look like this:</p>
+          
+          <pre><code>
+          &lt;!DOCTYPE html&gt;
+      &lt;html&gt;
+        &lt;head&gt;
+          &lt;meta charset="utf-8"&gt;
+          &lt;title&gt;My CSS experiment&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;h1 style="color: blue;background-color: yellow;border: 1px solid black;"&gt;Hello World!&lt;/h1&gt;
+          &lt;p style="color:red;"&gt;This is my first CSS example&lt;/p&gt;
+        &lt;/body&gt;
+      &lt;/html&gt;
+          </pre></code>
+          <p>Please don't do this, unless you really have to! It is really bad for maintenance (you might have to update the same information multiple times per document), and it also mixes your presentational CSS information with your HTML structural information, making the CSS harder to read and understand. Keeping your different types of code separated and pure makes for a much easier job for all who work on the code.</p>
+          <p>The only time you might have to resort to using inline styles is when your working environment is really restrictive (perhaps your CMS only allows you to edit the HTML body.)</p>
+        </section>
+        <section class="main-section" id="What's_next"> <header>What's next</header>
+          <p>At this point you should understand the basics of how CSS works, and how browsers deal with it. Here are some great resources to learn more about CSS:</p>
+          <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps" target="_blank">CSS first steps</a></li>
+            <li><a href="https://www.w3schools.com/Css/default.asp" target="_blank"> CSS Tutorial</a></li>
+            <li><a href="https://cssreference.io/" target="_blank"> Visual Guide to CSS</a></li>
+          </ul>
+        </section>
         
       </main>
       
