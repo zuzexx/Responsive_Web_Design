@@ -10,23 +10,83 @@
 <body>
     <main id="main-doc">
   
-        <section class="main-section" id="section_1"> 
-            <header>Section 1</header>
+        <section class="main-section" id="what_is_CSS"> <header>What is CSS?</header>
+          <p>CSS is a language for specifying how documents are presented to users — how they are styled, laid out, etc. </p>
+          <p> A document is usually a text file structured using a markup language — HTML is the most common markup language, but you will also come across other markup languages such as SVG or XML.</p>
+          <p>Presenting a document to a user means converting it into a usable form for your audience. Browsers, like Firefox, Chrome or Internet Explorer, are designed to present documents visually, for example, on a computer screen, projector or printer. </p>
         </section>
-        <section class="main-section" id="section_2"> 
-            <header>Section 2</header>
+        <section class="main-section" id="CSS_and_HTML"> <header>CSS and HTML</header>
+          <p>Web browsers apply CSS rules to a document to affect how they are displayed. A CSS rule is formed from:</p>
+          <ul>
+            <li>A set of properties, which have values set to update how the HTML content is displayed, for example I want my element's width to be 50% of its parent element, and its background to be red.</li>
+            <li>A selector, which selects the element(s) you want to apply the updated property values to. For example, I want to apply my CSS rule to all the paragraphs in my HTML document. </li>
+          </ul>
+          <p> A set of CSS rules contained within a stylesheet determines how a webpage should look. </p>
+          
+          <h3> A quick CSS example </h3>
+          
+          <p> The above descriptions may or may not have made sense, so let's make sure things are clear by presenting a quick example. First of all, let's take a simple HTML document, containing an &lt;h1&gt; and a &lt;p&gt; (notice that a stylesheet is applied to the HTML using a &lt;link&gt; element):</p>
+         <pre> <code>
+            &lt;!DOCTYPE html&gt;
+      &lt;html&gt;
+        &lt;head&gt;
+          &lt;meta charset="utf-8"&gt;
+          &lt;title&gt;My CSS experiment&lt;/title&gt;
+          &lt;link rel="stylesheet" href="style.css"&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;h1&gt;Hello World!&lt;/h1&gt;
+          &lt;p&gt;This is my first CSS example&lt;/p&gt;
+        &lt;/body&gt;
+      &lt;/html&gt;
+          </code></pre>
+          <p> Now let's look at a very simple CSS example containing two rules:</p>
+          <pre> <code>
+          h1 {
+        color: blue;
+        background-color: yellow;
+        border: 1px solid black;
+      }
+      p {
+        color: red;
+      }
+      </code> </pre>
+          <p> The first rule starts with an h1 selector, which means that it will apply its property values to the &lt;h1&gt; element. It contains three properties and their values (each property/value pair is called a declaration): </p>
+          <ul>
+            <li>The first one sets the text color to blue.</li>
+            <li>The second sets the background color to yellow.</li>
+            <li>The third one puts a border around the header that is 1 pixel wide, solid (not dotted, or dashed, etc.), and colored black.</li>
+          </ul>
+          <p>The second rule starts with a p selector, which means that it will apply its property values to the &lt;p&lt> element. It contains one declaration, which sets the text color to red. </p>
         </section>
-        <section class="main-section" id="section_3"> 
-            <header>Section 3</header>
+        <section class="main-section" id="How_CSS_works"> <header>How CSS works</header>
+          <p>When a browser displays a document, it must combine the document's content with its style information. It processes the document in two stages:</p>
+          <ul>
+            <li>The browser converts HTML and CSS into the DOM (Document Object Model). The DOM represents the document in the computer's memory. It combines the document's content with its style.</li>
+            <li>The browser displays the contents of the DOM.</li>
+          </ul>
+          <img src="https://media.prod.mdn.mozit.cloud/attachments/2015/10/14/11781/ab96f980498d7c46fe26f6df06b9acfc/rendering.svg" alt="How CSS Works">
         </section>
-        <section class="main-section" id="section_4"> 
-            <header>Section 4</header>
+        <section class="main-section" id="About_the_DOM"> <header>About the DOM</header>
+          <p>A DOM has a tree-like structure. Each element, attribute and piece of text in the markup language becomes a DOM node in the tree structure. The nodes are defined by their relationship to other DOM nodes. Some elements are parents of child nodes, and child nodes have siblings.</p>
+          <p>Understanding the DOM helps you design, debug and maintain your CSS because the DOM is where your CSS and the document's content meet up.</p>
+          <h3>DOM Representation </h3>
+          <p>Rather than a long, boring explanation, let's take an example to see how the DOM and CSS work together.</p>
+          <p> Let's assume the following HTML code:</p>
+          <pre><code>
+          &lt;p&gt;
+      Let's use:
+        &lt;span&gt;Cascading&lt;/span&gt;
+        &lt;span&gt;Style&lt;/span&gt;
+        &lt;span&gt;Sheets&lt;/span&gt;
+      &lt;/p&gt;
+      </code></pre>
         </section>
-        <section class="main-section" id="section_5"> 
-            <header>Section 5</header>
-        </section>
+        <section class="main-section" id="section_5"> <header>Section 5</header></section>
+        <section class="main-section" id="section_6"> <header>Section 6</header></section>
         
       </main>
+      
 
     <script src="script.js"></script>
     
