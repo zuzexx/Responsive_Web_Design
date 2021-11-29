@@ -50,8 +50,28 @@ div{
 pre{
   background-color:#ffcc99;
   color:black;
-  width:370px;
+  width:350px;
 }
 .pri{
-  width:750px;
+  width:700px;
+}
+section{
+  margin:50px;
+}
+@media only screen and(max-width:800px){
+  #navbar ul{
+    height:200px;
+  }
+  #navbar{
+    position:absolute;
+    margin:0;
+    top:0;
+    width:100px;
+    border-bottom: 1px, solid, black;
+  }
+  div{
+    position:relative;
+    left:0px;
+    top:220px;
+  }
 }
