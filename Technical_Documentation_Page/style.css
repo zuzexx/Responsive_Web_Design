@@ -8,10 +8,12 @@ main{
 header{
   font-weight:700;
   font-size:30px;
+  color:#4182be;
 }
 h3{
   font-weight:500;
   font-size:20px;
+  color:#7aa7d1;
 }
 p{
   font-weight:300;
@@ -42,36 +44,49 @@ p{
   cursor: pointer;
   font-weight:300;
 }
+.navi a:hover {
+  background-color: #d9e6f2;
+  color: black;
+}
 div{
   position:absolute;
-  left:400px;
+  left:450px;
   
 }
 pre{
   background-color:#ffcc99;
   color:black;
-  width:350px;
+  width:450px;
 }
 .pri{
-  width:700px;
+  width:850px;
 }
 section{
   margin:50px;
 }
+
 @media only screen and(max-width:800px){
+  section{
+  position:relative;
+  margin-left:0px;
+  margin-top:270px;
+  width:600px;
+  }
   #navbar ul{
     height:200px;
   }
   #navbar{
-    position:absolute;
+    position:relative;
     margin:0;
     top:0;
     width:100px;
     border-bottom: 1px, solid, black;
+    padding:0;
+    z-index:3;
   }
   div{
     position:relative;
     left:0px;
-    top:220px;
+    margin-top:220px;
   }
 }
