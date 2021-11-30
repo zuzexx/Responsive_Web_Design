@@ -27,7 +27,6 @@ h2{
   float:left;
   font-size:30px;
   
-  
 }
 #navbar a{
   padding:40px;
@@ -65,3 +64,16 @@ h2{
     background-color:#2e5cb8;
   }
 }
+#projects a{
+  color:white;
+  text-decoration:none;
+  font-size:30px;
+  
+}
+
+p{
+  color:white;
+  text-decoration:none;
+  font-size:30px;
+}
+
