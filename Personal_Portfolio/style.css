@@ -1,11 +1,42 @@
 *{box-sizing: border-box;}
 
-body{
+#main{
+    background-color:#4d004d;
+  }
+  
+  #navbar ul{
+    list-style-type:none;
     margin:0;
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    padding:0;
     overflow:hidden;
-}
+    background-color:black;
+  }
+  #navbar li{
+    display:inline;
+    float:left;
+    font-size:25px;
+      
+  }
+  #navbar a{
+    padding:40px;
+    color:white;
+    display:block;
+    text-decoration:none;
+  }
+  #navbar a:hover{
+    cursor:pointer;
+    background-color:#4d004d;
+    color: white;
+  }
+  
+  #welcome-section{
+    margin:0;
+      display: flex;
+      height: 100vh;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow:hidden;
+      color:white;
+      
+  }
