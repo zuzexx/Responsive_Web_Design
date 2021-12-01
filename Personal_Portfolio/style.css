@@ -3,6 +3,9 @@
   background-color:#4d004d;
   font-family:"Caveat", sans-serif;
 }
+img{
+  width:450px;
+}
 h1{
   font-weight:700;
   font-size:100px;
@@ -50,6 +53,20 @@ h2{
     overflow:hidden;
     color:white;
 }
+#projects{
+  text-align:center;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  max-width:1440px;
+  margin:0 auto;
+  margin-bottom:50px;
+  width:100%;
+  grid-gap:100px;
+  
+}
+#project-tile{
+  display:box;
+}
 @media screen and (max-width: 880px) {
   body {
     background-color: #2e5cb8;
@@ -76,4 +93,5 @@ p{
   text-decoration:none;
   font-size:30px;
 }
+
 
