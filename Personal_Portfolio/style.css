@@ -71,6 +71,17 @@ h2{
   body {
     background-color: #2e5cb8;
   }
+  h1{
+    font-size:80px;
+  }
+  h2{
+    font-size:40px;
+  }
+  img{
+    width:300px;
+    left:50px;
+  }
+ 
   #navbar ul{
     background-color:#2e5cb8;
   }
