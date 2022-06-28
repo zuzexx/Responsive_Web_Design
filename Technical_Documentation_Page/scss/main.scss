@@ -1,0 +1,112 @@
+@import "./variables";
+
+@function weight($weight-name){
+    @return map-get($font-weight, $weight-name);
+}
+
+@mixin mobile(){
+    @media(max-width:$mobile){
+        @content;
+    }
+}
+
+img{
+    width:700px;
+}
+main{
+    font-family: $font-family;
+}
+header{
+    font-weight:weight("bold");
+    font-size:30px;
+    color:$header-color;
+}
+h3{
+    font-weight:weight("medium");
+    font-size:20px;
+    color:$h3-color;
+  }
+  p{
+    font-weight:weight("normal");
+  }
+  #navbar {
+    position:fixed;
+    width:350px;
+    top:0px;
+    left:0px;
+    height:100px;
+    border-right:solid, 3px, $border-color;
+
+    @include mobile(){
+        position:relative;
+        margin:0;
+        top:0;
+        width:100px;
+        border-bottom: 1px, solid, black;
+        padding:0;
+        z-index:3;
+    }
+
+    ul{
+        height:100%;
+        padding:0%;
+
+        @include mobile(){
+            height:200px;
+        }
+      }
+    
+      li{
+        color:$li-color;
+        list-style:none;
+        position:relative;
+        width:100%;
+      }
+
+      a{
+        display: block;
+        padding: 10px 20px;
+        color: $a-color;
+        text-decoration: none;
+        cursor: pointer;
+        font-weight:300;
+
+        &:hover{
+            background-color: $a-hover-color;
+            color: black;
+        }
+
+      }
+
+  }
+
+  div{
+    position:absolute;
+    left:450px;
+
+    @include mobile(){
+        position:relative;
+        left:0px;
+        margin-top:220px;
+    }
+    
+  }
+  pre{
+    background-color:#ffcc99;
+    color:black;
+    width:450px;
+  }
+  .pri{
+    width:850px;
+  }
+  section{
+    margin:50px;
+
+    @include mobile(){
+        position:relative;
+        margin-left:0px;
+        margin-top:270px;
+        width:600px;
+    }
+
+  }
